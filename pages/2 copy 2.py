@@ -1,13 +1,10 @@
 import streamlit as st
-import streamlit_book as stb
 
-# Set wide display
-st.set_page_config(layout="wide")
+st.title("Intro")
 
-st.write("USER:")
-st.write(st.experimental_user)
-
-# Some display on the sidebar
+st.markdown("""
+This is a test, considering a reference to a single file
+""")
 
 st.sidebar.markdown("Some text")
 st.sidebar.selectbox("Some options", ["uno", "dos", "tres"])
