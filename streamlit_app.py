@@ -1,11 +1,34 @@
 import streamlit as st
+import streamlit_book as stb
 
 st.set_page_config(layout="wide")
-c1, c2 = st.columns([7,3])
-with c1:
-    st.markdown("## 1000 Programadores Salteños")
-    st.markdown("# Construí esto, pero...  _¿Cómo lo comparto?_")
-    st.markdown("## Sebastián Flores, Junio 2022")
-    st.write("Repositorio de la presentación: https://github.com/sebastiandres/talk_2022_06_1000PS")
-with c2:
-    st.image("images/streamlit_cl.png")
+
+# Set multipage
+stb.set_book_config(menu_title="Charla",
+                    menu_icon="file-richtext",
+                    options=[
+                            "Introducción",
+                            "Problema",
+                            "DIY",
+                            "GUI", 
+                            "Notebook", 
+                            "Old Web", 
+                            "New Web", 
+                            "Chatbots", 
+                            "Webapps", 
+                            "Conclusión", 
+                            ],
+                    paths=[
+                            "docs/00_intro/", 
+                            "docs/10_problema/", 
+                            "docs/20_DIY/", 
+                            "docs/30_GUI/", 
+                            "docs/40_notebook/", 
+                            "docs/50_old_web/", 
+                            "docs/70_new_web/", 
+                            "docs/60_bots/", 
+                            "docs/80_webapps/", 
+                            "docs/90_conclusion/", 
+                            ],
+                    save_answers=False,
+                    )
